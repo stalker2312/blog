@@ -36,7 +36,7 @@
             <a class="nav-link" href="main/add">Добавить пост</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="">О блоге</a>
+            <a class="nav-link disabled" href="/main/admin">Вход</a>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -67,14 +67,13 @@
            foreach ($data as  $value) {   ?>
            
             <div class="col-md-4">
-            <h1> <? echo $value['name'];?></h1>
-            <h2> <?echo $value['zag'];?></h2>
+            <h1> <?echo $value['zag'];?></h1>
+            <h2> <? echo $value['name'];?></h2>
             <p> <?echo $value['text'];?></p>
-        
+            <p><?echo $value['data'];?></p>
             <img src="/images/<?echo $value['img'];?>" alt="отсутствует">
             
-
-            <p><a class="btn btn-secondary" href="main/red?id=<?echo $value['id'];?>"  role="button"> Редактировать &raquo;</a></p>
+            
           </div>
 
           <?
